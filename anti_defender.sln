@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "anti_defender", "anti_defender\anti_defender.vcxproj", "{4193DE42-C103-45FF-A04D-0AD64616BC59}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3CFB521D-40ED-4891-8B6C-ED0644A237C1} = {3CFB521D-40ED-4891-8B6C-ED0644A237C1}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "minhook", "minhook\minhook.vcxproj", "{3CFB521D-40ED-4891-8B6C-ED0644A237C1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "anti_defender_loader", "anti_defender_loader\anti_defender_loader.vcxproj", "{EE666120-EE4C-4D91-A545-66BEAA1830C1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4193DE42-C103-45FF-A04D-0AD64616BC59} = {4193DE42-C103-45FF-A04D-0AD64616BC59}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shared", "shared\shared.vcxitems", "{7F613A38-89F7-4468-95A4-6A53F2F728DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4193DE42-C103-45FF-A04D-0AD64616BC59}.Debug|x64.ActiveCfg = Debug|x64
+		{4193DE42-C103-45FF-A04D-0AD64616BC59}.Debug|x64.Build.0 = Debug|x64
+		{4193DE42-C103-45FF-A04D-0AD64616BC59}.Debug|x86.ActiveCfg = Debug|Win32
+		{4193DE42-C103-45FF-A04D-0AD64616BC59}.Debug|x86.Build.0 = Debug|Win32
+		{4193DE42-C103-45FF-A04D-0AD64616BC59}.Release|x64.ActiveCfg = Release|x64
+		{4193DE42-C103-45FF-A04D-0AD64616BC59}.Release|x64.Build.0 = Release|x64
+		{4193DE42-C103-45FF-A04D-0AD64616BC59}.Release|x86.ActiveCfg = Release|Win32
+		{4193DE42-C103-45FF-A04D-0AD64616BC59}.Release|x86.Build.0 = Release|Win32
+		{3CFB521D-40ED-4891-8B6C-ED0644A237C1}.Debug|x64.ActiveCfg = Debug|x64
+		{3CFB521D-40ED-4891-8B6C-ED0644A237C1}.Debug|x64.Build.0 = Debug|x64
+		{3CFB521D-40ED-4891-8B6C-ED0644A237C1}.Debug|x86.ActiveCfg = Debug|Win32
+		{3CFB521D-40ED-4891-8B6C-ED0644A237C1}.Debug|x86.Build.0 = Debug|Win32
+		{3CFB521D-40ED-4891-8B6C-ED0644A237C1}.Release|x64.ActiveCfg = Release|x64
+		{3CFB521D-40ED-4891-8B6C-ED0644A237C1}.Release|x64.Build.0 = Release|x64
+		{3CFB521D-40ED-4891-8B6C-ED0644A237C1}.Release|x86.ActiveCfg = Release|Win32
+		{3CFB521D-40ED-4891-8B6C-ED0644A237C1}.Release|x86.Build.0 = Release|Win32
+		{EE666120-EE4C-4D91-A545-66BEAA1830C1}.Debug|x64.ActiveCfg = Debug|x64
+		{EE666120-EE4C-4D91-A545-66BEAA1830C1}.Debug|x64.Build.0 = Debug|x64
+		{EE666120-EE4C-4D91-A545-66BEAA1830C1}.Debug|x86.ActiveCfg = Debug|Win32
+		{EE666120-EE4C-4D91-A545-66BEAA1830C1}.Debug|x86.Build.0 = Debug|Win32
+		{EE666120-EE4C-4D91-A545-66BEAA1830C1}.Release|x64.ActiveCfg = Release|x64
+		{EE666120-EE4C-4D91-A545-66BEAA1830C1}.Release|x64.Build.0 = Release|x64
+		{EE666120-EE4C-4D91-A545-66BEAA1830C1}.Release|x86.ActiveCfg = Release|Win32
+		{EE666120-EE4C-4D91-A545-66BEAA1830C1}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B97EF7C-68E9-416F-8367-44F8E66253D0}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		shared\shared.vcxitems*{4193de42-c103-45ff-a04d-0ad64616bc59}*SharedItemsImports = 4
+		shared\shared.vcxitems*{7f613a38-89f7-4468-95a4-6a53f2f728dc}*SharedItemsImports = 9
+		shared\shared.vcxitems*{ee666120-ee4c-4d91-a545-66beaa1830c1}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal
