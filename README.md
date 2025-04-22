@@ -20,6 +20,26 @@ Startup fix:
 
 The current version of wsc.dll has a little security check at the beginning that terminates itself if it thinks something fishy is going on.  There's a lil 1 byte patch included to bypass that.
 
+## Installation instructions
+
+- Download the release and extract to a folder
+
+- Download avast_free_antivirus_offline_setup.exe and put it in that folder
+
+- Run wsc_extract.exe to grab the necessary files from inside the installer
+
+- Delete avast_free_antivirus_offline_setup.exe if you want
+
+- Run anti_defender_loader.exe
+
+To uninstall:
+
+- Run `anti_defender_loader.exe --disable`
+
+If Avast's offline installer changes name:
+
+- Run `wsc_extract.exe new_filename_here`
+
 
 ## How it works
 
