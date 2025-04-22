@@ -22,6 +22,8 @@ The current version of wsc.dll has a little security check at the beginning that
 
 ## Installation instructions
 
+- Open settings, go to Windows Security, disable real-time protection
+
 - Download the release and extract to a folder
 
 - Download avast_free_antivirus_offline_setup.exe and put it in that folder
