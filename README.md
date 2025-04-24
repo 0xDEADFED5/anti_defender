@@ -43,7 +43,7 @@ If Avast's offline installer changes name:
 - Run `wsc_extract.exe new_filename_here`
 
 
-## How it works
+## How it works (written by es3n1n)
 
 There's a WSC (Windows Security Center) service in Windows which is used by antiviruses to let Windows know that there's some other antivirus in the hood and it should disable Windows Defender.  
 This WSC API is undocumented and furthermore requires people to sign an NDA with Microsoft to get its documentation, so I decided to take an interesting approach for such a thing and used an already existing antivirus called Avast. This AV engine includes a so-called `wsc_proxy.exe` service, which essentially sets up the WSC API for Avast.  
