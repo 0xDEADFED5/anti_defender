@@ -106,7 +106,7 @@ fn get_file(
     loop {
         loop {
             // search down for filename
-            file.seek(SeekFrom::Start(offset))?; // this will eventually return on a bad search
+            file.seek(SeekFrom::Start(offset))?;
             file.read_exact(&mut buffer)?;
             for x in 0..4096 - p.len() {
                 for y in 0..p.len() {
