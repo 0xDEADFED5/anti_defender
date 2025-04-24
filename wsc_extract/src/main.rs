@@ -95,12 +95,14 @@ fn get_file(
     machine_type: u16,
 ) -> Result<Vec<u8>, Box<dyn std::error::Error>> {
     let mut file = File::open(filename)?;
+    let file_len = file.metadata().unwrap().len();
     let mut buffer = [0u8; 4096];
     let p = pattern.as_bytes();
     let mut offset = 0;
     let mut index = 0;
     let mut ape_index = 0;
     let mut found = false;
+    let ape = [0x01, 0x41, 0x50, 0x45];
     loop {
         loop {
             // search down for filename
@@ -119,13 +121,15 @@ fn get_file(
                     break;
                 }
             }
-            if found {
+            if found || file_len - (offset + 4096 - p.len() as u64) < 4096 {
                 break;
             }
             offset += 4096 - p.len() as u64;
         }
+        if !found {
+            return Err(format!("Not found: {:?}", pattern).into());
+        }
         // search up for .APE header
-        let ape = [0x01, 0x41, 0x50, 0x45];
         offset = index - 4096;
         loop {
             file.seek(SeekFrom::Start(offset))?;
@@ -143,10 +147,7 @@ fn get_file(
                     break;
                 }
             }
-            if found {
-                break;
-            }
-            if offset < 4096 - 4 {
+            if found || offset < 4096 - 4 {
                 break;
             }
             offset -= 4096 - 4;
