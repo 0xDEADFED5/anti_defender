@@ -42,6 +42,9 @@ If Avast's offline installer changes name:
 
 - Run `wsc_extract.exe new_filename_here`
 
+## Compatibility
+
+This has only been tested on Win11 x64.  There are reports of it *not* working on Win10.
 
 ## How it works (written by es3n1n)
 
